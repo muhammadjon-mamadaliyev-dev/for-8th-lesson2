@@ -54,12 +54,7 @@ class PostFormView(FormView):
     success_url = "/"
     
     
-    
-    # def form_valid(self, form):
-    #     title = form.cleaned_data['title']
-    #     content = form.cleaned_data['content']
-    #     Post.objects.create(title = title,content = content)
-    #     return super().form_valid(form)
+
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
